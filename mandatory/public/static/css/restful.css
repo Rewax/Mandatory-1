@@ -1,0 +1,19 @@
+.body{
+    background-color: #282c34;
+   color: white;
+   padding: 40px;
+   font-family: Arial;
+   text-align: center;
+ }
+ 
+ #title {
+    text-align: center;
+    font-size: 2em;
+ }            
+ 
+ a {
+    color: yellow;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/restful.css">
+    <title>Restful</title>
+</head>
+<body class="body">
+    <h1 id="title">Welcome to Restful</h1>
+     
+    <div>
+        <img src="/static/pictures/get.png">
+        <img src="/static/pictures/post.png">
+        <img src="/static/pictures/put.png">
+        <img src="/static/pictures/patch.png">
+        <img src="/static/pictures/delete.png">
+        </div>
+    <div>
+        <table border="1">
+            <tr>
+              <th>Tools</th>
+            </tr>
+            <td>
+                <b>Restful Architecture:</b><br><br>
+                <b>Stateless:</b> Meaning the client data is not stored on the server, the session is stored client-side (typically in session storage).<br><br>
+                <b>Client<->Server:</b> There is a separation of concerns between the front-end (client) and the back-end (server). They operate independently of each other and both are replaceable.<br><br>
+                <b>Cache:</b> Data from the server can be cached on the client, which can improve performance speed.<br><br>
+                <b>URL Composition:</b> We use a standardized approach to the composition of base URLs. For example, a GET request to /cities, should yield all the cities in the database, whereas a GET request to /cities/seattle would render the city with an ID of seattle. Similarly, REST utilizes standard methods like GET, PUT, DELETE and POST to perform actions. Which we’ll take a look at in the next section<br><br>
+                <br><br>
+                <b>HTTP Methods:</b><br>
+                <b>GET:</b> This method is used to read (or retrieve) a representation of a resource. If all is well, GET returns a representation in XML or JSON and an HTTP response code of 200 (OK). In an error case, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).<br><br>
+                <b>POST:</b> This method is often utilized to create new resources. In particular, it’s used to create subordinate resources. That is, subordinate to some other (e.g. parent) resource. On successful creation, it returns HTTP status 201, returning a location header with a link to the newly-created resource with the 201 HTTP status.<br><br>
+                <b>PUT:</b> It’s used for updating capabilities and also to create a resource (in the case where the resource ID is chosen by the client instead of the server). Essentially PUT is to a URL that contains the value of a non-existent resource ID. A successful update returns 200 (or 204 if not returning any content in the body) from a PUT. If using PUT for create, it returns HTTP status 201 on successful creation.<br><br>
+                <b>PATCH:</b> It’s used for modify capabilities. The PATCH request only needs to contain the changes to the resource, not the complete resource. This is similar to PUT, however the body contains a set of instructions describing how a resource currently residing on the server should be modified to produce a new version. So the PATCH body should not just be a modified part of the resource, but in some kind of patch language like JSON Patch or XML Patch.<br><br>
+                <b>DELETE:</b> Fairly self explanatory, it’s used to delete a resource identified by a URL. Upon successful deletion, it returns HTTP status 200 (OK) along with a response body.<br><br>
+            <tr>
+                <th>Link</th>
+              </tr>
+             <tr>
+                <td class="links"><a href="/">Take me back to the frontpage</a></td>
+             </tr>
+            <tr>
+            </tr>
+            <tr>
+                <th>Summery</th>
+              </tr>
+            <tr>
+                <td>What is a REST API? A REST API is a way of easily accessing web services without having excess processing. Whenever a RESTful API is called, the server will transfer to the client a representation of the state of the requested resource.</td>
+            </tr>
+          </table>
+        </div>
+</body>
+</html>
